@@ -1,8 +1,8 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-export function getHtmlImageList(iamgesList) {
-  if (iamgesList.length <= 0) {
+export function getHtmlImageList(imagesList) {
+  if (imagesList.length <= 0) {
     iziToast.error({
       message:
         'Sorry, there are no images matching your search query. Please try again!',
@@ -12,7 +12,7 @@ export function getHtmlImageList(iamgesList) {
     });
     return 'no images found';
   } else {
-    const htmlImagesList = iamgesList
+    const htmlImagesList = imagesList
       .map(
         image =>
           `<li class="gallery-item">
